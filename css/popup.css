@@ -1,0 +1,86 @@
+#extTitle {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+div#groupDiv {
+    /*width: 14.5em;*/
+    width: 200px;
+    max-height: 270px;
+    overflow-y: auto;
+    min-height: 50px;
+}
+
+body {
+    margin: 0.5em 1em;
+}
+
+img.group, img#newGroup, .dot{
+    margin: 0.3em;
+}
+
+#groupTitle {
+    text-align: center;
+    float: none;
+    min-height: 1.5em;
+    /*
+    -webkit-animation: fadein 2s;
+    animation: fadein 2s;*/
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.extButton {
+    background-color: rgb(241, 50, 50);
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 0.75em;
+    border-radius: 0.25em;
+    opacity: 0.6;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#createButton {
+    background-color: rgb(19, 173, 5);
+}
+
+.extButton:hover {
+    opacity: 1;
+}
+
+#colour {
+    height: 3em;
+    width: 3em;
+}
+
+#cancelButton {
+    float: right;
+}
+
+.centered {
+    margin: auto;
+}
+
+button#clearButton {
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    height: 38px;
+    width: 38px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
