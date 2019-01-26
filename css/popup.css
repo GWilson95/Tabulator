@@ -4,7 +4,6 @@
 }
 
 div#groupDiv {
-    /*width: 14.5em;*/
     width: 200px;
     max-height: 270px;
     overflow-y: auto;
@@ -15,7 +14,7 @@ body {
     margin: 0.5em 1em;
 }
 
-img.group, img#newGroup, .dot{
+img.group, img#newGroup, .group{
     margin: 0.3em;
 }
 
@@ -23,20 +22,6 @@ img.group, img#newGroup, .dot{
     text-align: center;
     float: none;
     min-height: 1.5em;
-    /*
-    -webkit-animation: fadein 2s;
-    animation: fadein 2s;*/
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
 }
 
 .extButton {
@@ -77,10 +62,23 @@ button#clearButton {
     justify-content: center;
 }
 
-.dot {
+.group {
     height: 38px;
     width: 38px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 38px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.createLabel {
+    margin-top: 8px;
+}
+
+#name {
+    width: 100%;
 }
