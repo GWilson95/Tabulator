@@ -1,6 +1,12 @@
 /* Connects functions to button clicks as chrome does not allow it inline in the HTML */
 setupButtons();
 
+/* If the user hits the 'enter' key on the popup, it activates the createButton click */
+document.onkeyup = function(key) {
+    if (key.key == 'Enter')
+        document.getElementById("createButton").click();
+}
+
 /* Add onclick functions to the HTML buttons */
 function setupButtons() {
     var createButton = document.getElementById('createButton');
