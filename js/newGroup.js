@@ -10,27 +10,30 @@ document.onkeyup = function(key) {
 /* Add onclick functions to the HTML buttons */
 function setupButtons() {
     var createButton = document.getElementById('createButton');
-    createButton.onclick = function(){createGroup()};
+    createButton.onclick = function() { createGroup() };
 
     var cancelButton = document.getElementById('cancelButton');
-    cancelButton.onclick = function(){window.close()};
+    cancelButton.onclick = function() { window.close() };
 }
 
 /* Creates a group using data inputted by user and closes the window */
 function createGroup() {
     // Gets values
     var name = document.getElementById('name').value;
-    var colour = document.getElementById('colour').value;
-    var fontColour = getFontColour(colour);
+    var err = document.getElementById('err');
 
-    // Requests background script creates a new group with the data and closes the window
-    chrome.runtime.sendMessage({greeting: "newGroup_" + JSON.stringify({groupName: name, groupColour: colour, fontColour: fontColour})}, function(response) {
-        console.log('HI RETURN');
-        window.close();
+    // Requests background script to create a new group with the data and closes the popup window
+    chrome.runtime.sendMessage({greeting: "createGroup_" + JSON.stringify({groupName: name})}, function(response) {
+        console.log(response);
+        if (response.msg === 'created')
+            window.close();
+        else
+            err.textContent = response.msg;
     });
 }
 
 /* Takes a hexadecimal colour string and gets a readable font colour based on the background colour selected for the group */
+/*
 function getFontColour(colour){
     // Gets the RGB values
     var r = parseInt(colour.substr(1, 2), 16);
@@ -71,3 +74,4 @@ function decToHexString(value){
     }
     return hexValue;
 }
+*/
