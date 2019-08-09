@@ -14,10 +14,6 @@ body {
     margin: 0.5em 1em;
 }
 
-img.group, img#newGroup, .group{
-    margin: 0.3em;
-}
-
 #groupTitle {
     text-align: center;
     float: none;
@@ -31,7 +27,7 @@ img.group, img#newGroup, .group{
     text-align: center;
     padding: 0.75em;
     border-radius: 0.25em;
-    opacity: 0.6;
+    opacity: 0.8;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -42,11 +38,6 @@ img.group, img#newGroup, .group{
 
 .extButton:hover {
     opacity: 1;
-}
-
-#colour {
-    height: 3em;
-    width: 3em;
 }
 
 #cancelButton {
@@ -62,23 +53,46 @@ button#clearButton {
     justify-content: center;
 }
 
-.group {
-    height: 38px;
-    width: 38px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 38px;
-    font-size: 15px;
-    font-weight: bold;
-}
-
 .createLabel {
     margin-top: 8px;
 }
 
 #name {
     width: 100%;
+}
+
+.group {
+    width: 100%;
+    margin-bottom: 0.3em;
+    background-color: rgb(104, 104, 104);
+    border: none;
+    color: rgb(221, 221, 221);
+    text-align: center;
+    padding: 0.25em;
+    border-radius: 0.25em;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.group:hover {
+    opacity: 1;
+}
+
+.alignleft {
+    float: left;
+    padding-left: 0.5em;
+}
+
+.alignright {
+    float: right;
+    padding-right: 0.5em;
+}
+
+.errorMsg {
+    color: red;
+}
+
+#buttonDiv {
+    margin-top: 0;
 }

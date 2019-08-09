@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
+    <!-- Meta Data -->
     <head>
+        <title>Tabulator</title>
         <link rel="stylesheet" href="css/popup.css">
     </head>
+    <!-- Main Body -->
     <body id="container">
         <h2 id="extTitle">Create a Group</h2>
         <hr />
-        <span class="centered">Group Name: </span>
+        <span style="width: 100%"><span class="alignleft">Group Name:</span><span id="err" class="alignright errorMsg"></span></span>
         <br>
-        <input type="text" id="name" class="centered createLabel" name="name" />
-        <br><br>
-        <span class="centered">Group Colour: </span>
-        <br>
-        <input type="color" id="colour" class="centered createLabel" name="colour" value="#e66465" />
+        <input type="text" id="name" class="centered createLabel" name="name" autocomplete="off" maxlength="20" autofocus />
         <br><br>
         <div>
             <button id="createButton" class="extButton">Create</button>
