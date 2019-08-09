@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Tabulator",
-  "version": "1.0",
+  "version": "2.0",
   "description": "Organize your tabs and save memory",
   "author": "Graham Wilson",
   "icons": {
